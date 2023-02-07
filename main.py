@@ -33,7 +33,7 @@ def main():
         #file_name = input()
         #try:
             #with open(file_name) as text_file:
-                text = text_file.read()
+                #text = text_file.read()
         #except IOError:
             #print('Invalid file name')
             #return
