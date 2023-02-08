@@ -29,20 +29,19 @@ def find_mismatch(text):
 
 def main():
     input_type = input() # before 'Please input F for file or I for input: '
-    #if input_type == 'F':
-        #file_name = input()
-        #try:
-            #with open(file_name) as text_file:
-                #text = text_file.read()
-        #except IOError:
-            #print('Invalid file name')
-            #return
-    #elif input_type == 'I':
-        #text = input('Please input brackets: ')
-    #else:
-        #print('Invalid input!')
-        #return
-    text = input_type[5:]
+    if input_type[:1] == 'F':
+        file_name = input()
+        try:
+            with open(file_name) as text_file:
+                text = text_file.read()
+        except IOError:
+            print('Invalid file name')
+            return
+    elif input_type[:1] == 'I':
+        text = input()
+    else:
+        print('Invalid input!')
+        return
     mismatch = find_mismatch(text)
     print(mismatch)
 
